@@ -12,5 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    $people = [];
+    $people = ['Taylor', 'Matt', 'Jeffrey'];
+
+    return view('welcome')->withPeople($people);
+
+//    return view('welcome', [
+//    ]);
+
+//    return view('welcome')->with(['people' => $people]);
+//    return view('welcome')->with('people', $people)->with();
+//    return View::make();
+//    return view('welcome')->with('people', $people);
+//    return view('welcome', compact('people'));
+//    return view('welcome', ['people' => $people]);
+//    return view('welcome');
 });

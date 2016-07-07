@@ -11,20 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-//    $people = [];
-    $people = ['Taylor', 'Matt', 'Jeffrey'];
+Route::get('/', 'PagesController@home');
+Route::get('about', 'PagesController@about');
 
-    return view('welcome')->withPeople($people);
-
-//    return view('welcome', [
-//    ]);
-
-//    return view('welcome')->with(['people' => $people]);
-//    return view('welcome')->with('people', $people)->with();
-//    return View::make();
-//    return view('welcome')->with('people', $people);
+//Route::get('/', function () {
+//    $people = ['Taylor', 'Matt', 'Jeffrey'];
 //    return view('welcome', compact('people'));
-//    return view('welcome', ['people' => $people]);
-//    return view('welcome');
-});
+//});

@@ -1,55 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layout')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <h1>The Welcome Page Goes Here</h1>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+    @unless(empty($people))
+        There are some people.
+    @endunless
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+    {{--@if(empty($people))--}}
+    {{--There are no people--}}
+    {{--@else--}}
+    {{--Something else here.--}}
+    {{--@endif--}}
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+    @foreach ($people as $person)
+        <li>{{ $person }}</li>
+    @endforeach
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
+@stop
 
-        @unless(empty($people))
-            There are some people.
-        @endunless
-
-        {{--@if(empty($people))--}}
-            {{--There are no people--}}
-        {{--@else--}}
-            {{--Something else here.--}}
-        {{--@endif--}}
-
-        @foreach ($people as $person)
-            <li>{{ $person }}</li>
-        @endforeach
-
-    </body>
-</html>

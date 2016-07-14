@@ -11,8 +11,13 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
-Route::get('about', 'PagesController@about');
+Route::get('cards', 'CardsController@index');
+
+Route::get('cards/{cards}', 'CardsController@show');
+//Route::get('cards/ID', 'CardsController@index');
+
+//Route::get('/', 'PagesController@home');
+//Route::get('about', 'PagesController@about');
 
 //Route::get('/', function () {
 //    $people = ['Taylor', 'Matt', 'Jeffrey'];

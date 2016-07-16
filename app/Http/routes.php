@@ -13,7 +13,7 @@
 
 Route::get('cards', 'CardsController@index');
 
-Route::get('cards/{cards}', 'CardsController@show');
+Route::get('cards/{card}', 'CardsController@show');
 //Route::get('cards/ID', 'CardsController@index');
 
 //Route::get('/', 'PagesController@home');

@@ -5,7 +5,8 @@
 
     @foreach($cards as $card)
         <div>
-            {{ $card->title }}
+            <a href="/cards/{{ $card->id }}">{{ $card->title }}</a>
+{{--            <a href="{{ $card->path() }}">{{ $card->title }}</a>--}}
         </div>
     @endforeach
 @stop

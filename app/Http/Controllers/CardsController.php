@@ -20,9 +20,18 @@ class CardsController extends Controller
         return view('cards.index', compact('cards'));
     }
 
-    public function show($card)
+    public function show(Card $card)
     {
-        return $card;
-        
+        return view('cards.show', compact('card'));
+
+//        return $card;
     }
+
+//    public function show($id)
+//    {
+//        $card = Card::find($id);
+//        return view('cards.show', compact('card'));
+////        return $card; // will return json
+//    }
+
 }
